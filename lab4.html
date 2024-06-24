@@ -1,0 +1,35 @@
+<html>
+    <title> Lab 4 </title>
+    <head>
+        <script type = "text/javascript"> 
+            var name,
+            currentdate,
+            datetime,
+            newdate,
+            itemsreq,
+            numitems;
+
+            name = window.prompt("please enter your name")
+            document.writeln("<h1> hello, " + name + ", welcome to Javascript Programming! </h1>");
+            itemsreq = window.prompt("Enter what you want");
+            numitems = window.prompt("Enter how many you want");
+            document.writeln("<h1> you want " + itemsreq + " this many " + numitems + "</h1>");
+            currentdate = new Date();
+            datetime = currentdate.getDate() + "/"
+                + (currentdate.getMonth()+1)  + "/" 
+                + currentdate.getFullYear();
+            document.writeln("<h1> Current date " + datetime + "</h1>"); 
+            newdate = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
+            datetime = newdate.getDate() + "/"
+                + (newdate.getMonth()+1)  + "/" 
+                +  newdate.getFullYear(); 
+            document.writeln("<h1> Arrival Date " + datetime + "</h1>");
+            
+        </script>
+    </head>
+    <body>
+        <h1> Click refresh (or reload) to run this script again  
+            
+        </h1>
+    </body>
+    </html>
